@@ -1,0 +1,23 @@
+{
+  "name": "calculator-front-end-and-api",
+  "version": "1.0.0",
+  "description": "A website that acts as a calculator. Consumes a RESTful API.",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimXia77/Calculator-Front-end-and-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimXia77/Calculator-Front-end-and-API/issues"
+  },
+  "homepage": "https://github.com/TimXia77/Calculator-Front-end-and-API#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
