@@ -1,2 +1,2 @@
 # Calculator-Front-end-and-API
-A quick website that acts as a calculator. Front end website that consumes an API.
+A website that acts as a calculator. Consumes a RESTful API.
