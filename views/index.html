@@ -5,6 +5,7 @@
     <style>
         .bigBlueButton{
             font-size: 24px;
+            width: 90px;
             background-color: #008CBA;
         }
 
@@ -18,14 +19,27 @@
         </div> -->
 
         Special Buttons?:
-        <button class="btn btn-call-to-action" id="calculate_button">Calculate</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button class="btn btn-default" type="submit">Button</button>
         <button class="btn btn-primary">Test Button?</button>
-
+        <button class="btn btn-call-to-action" id="call_to_action">Call to action button</button>
+        
+        <p>&nbsp</p>
+        
         <div>
-            Big Blue Button:
-            <button class = "bigBlueButton" id="submit_button">Submit</button>
+            <!-- <button class="btn btn-call-to-action" id="calculate_button">/</button> -->
+            <button class = "bigBlueButton" id="add_button"> + </button>
+            <button class = "bigBlueButton" id="subtract_button"> - </button>
+            <button class = "bigBlueButton" id="multiply_button"> * </button>
+            <button class = "bigBlueButton" id="divide_button"> / </button>
         </div>
 
+        <div>
+            <input type = "text"  id="operandField1" name = "operandField1"  value="" size = "30" />
+            <input type = "text"  id="operandField2" name = "operandField2"  value="" size = "30" />
+
+            <div id = "answer-area" value = "Answer: "></div>
+        </div>
     </div>
 
     <script src="/js/script.js"></script>
