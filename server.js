@@ -1,8 +1,10 @@
-const express = require('express');
-const http = require('http');
-const PORT = process.env.PORT || 3000; //will probably just be port 3000
-const app = express();
+const express = require('express')
+const http = require('http')
+const PORT = process.env.PORT || 3000 //will probably just be port 3000
+const app = express()
 
+//Some middleware to aid finding static files
+app.use(express.static(__dirname))
 
 //Routes
 app.get('/', (request, response) => {
