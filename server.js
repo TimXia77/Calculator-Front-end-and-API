@@ -21,6 +21,6 @@ app.listen(PORT, function(err){
     
     console.log("Server listening on Port", PORT)
     console.log(`Test the calculator on: http://localhost:${PORT}`) //delete the test me logs later
-    console.log(`You can see the history on: http://localhost:${PORT}/history`) //delete the test me logs later
+    console.log(`You can see the history on: http://localhost:${PORT}/history`)
 })
 

@@ -1,5 +1,10 @@
 
-//INELEGANT IMPLEMENTAION - CHANGE LATER
+/*
+TODO:
+- inelegant implementaion - change after rest api is confirmed and WET works
+- divide code into 1-2 other files
+*/
+
 
 let history = []
 
@@ -44,7 +49,7 @@ function updateHtml(answer) {
     document.getElementById("operandField2").value = ""
 
     history.push(answer)
-    if (history.length > 10) history.shift()
+    if (history.length > 10) history.shift() //The history can only hold max. 10 elements
     document.getElementById("history-area").innerHTML = "History: " + history;
 }
 
