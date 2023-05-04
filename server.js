@@ -8,15 +8,19 @@ app.use(express.static(__dirname))
 
 //Routes
 app.get('/', (request, response) => {
-  response.sendFile(__dirname + '/views/index.html')
+  response.sendFile(__dirname + '/views/calculator.html')
+})
+
+app.get('/history', (request, response) => {
+  response.sendFile(__dirname + '/views/history.html')
 })
 
 //starting the server, 
-//delete the test me logs later
 app.listen(PORT, function(err){
     if (err) console.log("An error has occured: Error when setting up the server.")
     
-    console.log("Server listening on Port", PORT);
-    console.log(`Test this on: http://localhost:${PORT}`);
+    console.log("Server listening on Port", PORT)
+    console.log(`Test this on: http://localhost:${PORT}`) //delete the test me logs later
+    console.log(`Test this on: http://localhost:${PORT}/history`) //delete the test me logs later
 })
 

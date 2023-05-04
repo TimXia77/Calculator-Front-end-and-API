@@ -8,7 +8,9 @@ function add() {
 
     let textDiv = document.getElementById("answer-area")
     let answer = Math.round((operand1 + operand2) * 100) / 100
-    textDiv.innerHTML = answer
+    textDiv.innerHTML = "Answer: " + answer
+    document.getElementById("operandField1").value = answer
+    document.getElementById("operandField2").value = ""
 
 }
 
@@ -19,8 +21,9 @@ function subtract() {
 
     let textDiv = document.getElementById("answer-area")
     let answer = Math.round((operand1 - operand2) * 100) / 100
-    textDiv.innerHTML = answer
-
+    textDiv.innerHTML = "Answer: " + answer
+    document.getElementById("operandField1").value = answer
+    document.getElementById("operandField2").value = ""
 }
 
 function multiply() {
@@ -30,8 +33,9 @@ function multiply() {
 
     let textDiv = document.getElementById("answer-area")
     let answer = Math.round((operand1 * operand2) * 100) / 100
-    textDiv.innerHTML = answer
-
+    textDiv.innerHTML = "Answer: " + answer
+    document.getElementById("operandField1").value = answer
+    document.getElementById("operandField2").value = ""
 }
 
 function divide() {
@@ -41,8 +45,9 @@ function divide() {
 
     let textDiv = document.getElementById("answer-area")
     let answer = Math.round((operand1 / operand2) * 100) / 100
-    textDiv.innerHTML = answer
-
+    textDiv.innerHTML = "Answer: " + answer
+    document.getElementById("operandField1").value = answer
+    document.getElementById("operandField2").value = ""
 }
 
 document.addEventListener('DOMContentLoaded', function() {
