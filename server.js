@@ -1,6 +1,6 @@
 const express = require('express')
 const http = require('http')
-const PORT = process.env.PORT || 3000 //will probably just be port 3000
+const PORT = process.env.PORT || 3000
 const app = express()
 
 //Some middleware to aid finding static files
@@ -20,7 +20,7 @@ app.listen(PORT, function(err){
     if (err) console.log("An error has occured: Error when setting up the server.")
     
     console.log("Server listening on Port", PORT)
-    console.log(`Test this on: http://localhost:${PORT}`) //delete the test me logs later
-    console.log(`Test this on: http://localhost:${PORT}/history`) //delete the test me logs later
+    console.log(`Test the calculator on: http://localhost:${PORT}`) //delete the test me logs later
+    console.log(`You can see the history on: http://localhost:${PORT}/history`) //delete the test me logs later
 })
 

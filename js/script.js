@@ -1,53 +1,51 @@
 
 //INELEGANT IMPLEMENTAION - CHANGE LATER
 
+let history = []
+
 function add() {
 
     let operand1 = Number(document.getElementById("operandField1").value)
     let operand2 = Number(document.getElementById("operandField2").value)
-
-    let textDiv = document.getElementById("answer-area")
     let answer = Math.round((operand1 + operand2) * 100) / 100
-    textDiv.innerHTML = "Answer: " + answer
-    document.getElementById("operandField1").value = answer
-    document.getElementById("operandField2").value = ""
 
+    updateHtml(answer)
 }
 
 function subtract() {
 
     let operand1 = Number(document.getElementById("operandField1").value)
     let operand2 = Number(document.getElementById("operandField2").value)
-
-    let textDiv = document.getElementById("answer-area")
     let answer = Math.round((operand1 - operand2) * 100) / 100
-    textDiv.innerHTML = "Answer: " + answer
-    document.getElementById("operandField1").value = answer
-    document.getElementById("operandField2").value = ""
+
+    updateHtml(answer)
 }
 
 function multiply() {
 
     let operand1 = Number(document.getElementById("operandField1").value)
     let operand2 = Number(document.getElementById("operandField2").value)
-
-    let textDiv = document.getElementById("answer-area")
     let answer = Math.round((operand1 * operand2) * 100) / 100
-    textDiv.innerHTML = "Answer: " + answer
-    document.getElementById("operandField1").value = answer
-    document.getElementById("operandField2").value = ""
+    
+    updateHtml(answer)
 }
 
 function divide() {
-
     let operand1 = Number(document.getElementById("operandField1").value)
     let operand2 = Number(document.getElementById("operandField2").value)
-
-    let textDiv = document.getElementById("answer-area")
     let answer = Math.round((operand1 / operand2) * 100) / 100
-    textDiv.innerHTML = "Answer: " + answer
+
+    updateHtml(answer)
+}
+
+function updateHtml(answer) {
+    document.getElementById("answer-area").innerHTML = "Answer: " + answer
     document.getElementById("operandField1").value = answer
     document.getElementById("operandField2").value = ""
+
+    history.push(answer)
+    if (history.length > 10) history.shift()
+    document.getElementById("history-area").innerHTML = "History: " + history;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
