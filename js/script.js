@@ -3,54 +3,49 @@
 
 function add() {
 
-    console.log("Pressed Add")
-
     let operand1 = Number(document.getElementById("operandField1").value)
     let operand2 = Number(document.getElementById("operandField2").value)
 
     let textDiv = document.getElementById("answer-area")
-    textDiv.innerHTML = "Answer: " + (operand1 + operand2)
+    let answer = Math.round((operand1 + operand2) * 100) / 100
+    textDiv.innerHTML = answer
 
 }
 
 function subtract() {
 
-    console.log("Pressed Subtract")
-
     let operand1 = Number(document.getElementById("operandField1").value)
     let operand2 = Number(document.getElementById("operandField2").value)
 
     let textDiv = document.getElementById("answer-area")
-    textDiv.innerHTML = "Answer: " + operand1 - operand2
+    let answer = Math.round((operand1 - operand2) * 100) / 100
+    textDiv.innerHTML = answer
 
 }
 
 function multiply() {
 
-    console.log("Pressed Multiply")
-
     let operand1 = Number(document.getElementById("operandField1").value)
     let operand2 = Number(document.getElementById("operandField2").value)
 
     let textDiv = document.getElementById("answer-area")
-    textDiv.innerHTML = "Answer: " + operand1 * operand2
+    let answer = Math.round((operand1 * operand2) * 100) / 100
+    textDiv.innerHTML = answer
 
 }
 
 function divide() {
 
-    console.log("Pressed Divide")
-
     let operand1 = Number(document.getElementById("operandField1").value)
     let operand2 = Number(document.getElementById("operandField2").value)
 
     let textDiv = document.getElementById("answer-area")
-    textDiv.innerHTML = "Answer: " + operand1 / operand2
+    let answer = Math.round((operand1 / operand2) * 100) / 100
+    textDiv.innerHTML = answer
 
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-
     //operations
     document.getElementById('add_button').addEventListener('click', add)    
     document.getElementById('subtract_button').addEventListener('click', subtract)    
